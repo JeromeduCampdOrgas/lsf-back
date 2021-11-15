@@ -73,5 +73,8 @@ app.use("/images", express.static(path.join(__dirname, "images")));
 app.use("/api/user", userRoutes);
 app.use("/api/chien", chienRoutes);
 app.use("/api/refuges", refugeRoutes);
+app.get("/", (req, res) => {
+  res.send("Hello from Express!");
+});
 
 module.exports = app;
